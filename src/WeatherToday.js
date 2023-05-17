@@ -51,6 +51,7 @@ export default function WeatherToday() {
               className="icon"
               src={require("./icons/rain.png")}
               width="200px"
+              alt="weather icon"
             />
           </div>
           <br />

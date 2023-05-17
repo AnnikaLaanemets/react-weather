@@ -11,6 +11,7 @@ export default function Forecast() {
               className="icon"
               src={require("./icons/sun.png")}
               width="60px"
+              alt="weather icon"
             />
           </div>
           <div>25°C/20°C</div>
@@ -22,6 +23,7 @@ export default function Forecast() {
               className="icon"
               src={require("./icons/sun.png")}
               width="60px"
+              alt="weather icon"
             />
           </div>
           <div>19°C/12°C</div>
@@ -33,6 +35,7 @@ export default function Forecast() {
               className="icon"
               src={require("./icons/sun.png")}
               width="60px"
+              alt="weather icon"
             />
           </div>
           <div>22°C/12°C</div>
@@ -44,6 +47,7 @@ export default function Forecast() {
               className="icon"
               src={require("./icons/sun.png")}
               width="60px"
+              alt="weather icon"
             />
           </div>
           <div>22°C/13°C</div>
@@ -55,6 +59,7 @@ export default function Forecast() {
               className="icon"
               src={require("./icons/sun.png")}
               width="60px"
+              alt="weather icon"
             />
           </div>
           <div>22°C/14°C</div>
@@ -66,6 +71,7 @@ export default function Forecast() {
               className="icon"
               src={require("./icons/sun.png")}
               width="60px"
+              alt="weather icon"
             />
           </div>
           <div>23°C/14°C</div>
@@ -77,6 +83,7 @@ export default function Forecast() {
               className="icon"
               src={require("./icons/sun.png")}
               width="60px"
+              alt="weather icon"
             />
           </div>
           <div>23°C/15°C</div>
@@ -88,6 +95,7 @@ export default function Forecast() {
               className="icon"
               src={require("./icons/sun.png")}
               width="60px"
+              alt="weather icon"
             />
           </div>
           <div>21°C/14°C</div>

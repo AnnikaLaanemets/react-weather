@@ -8,6 +8,7 @@ export default function Sunset() {
           className="icon"
           src={require("./icons/sunset.png")}
           width="180px"
+          alt="sunset/sunrise"
         />
       </div>
       <br />
