@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div class="grid wide">
+        <div className="grid wide">
           <div>
             <WeatherToday />
           </div>
@@ -22,6 +22,7 @@ function App() {
       </div>
     </div>
   );
+  <footer>https://github.com/AnnikaLaanemets/react-weather-board</footer>;
 }
 
 export default App;

@@ -2,7 +2,7 @@ import "./App.css";
 
 export default function WeatherToday() {
   return (
-    <div class="grid two-rows">
+    <div className="grid two-rows">
       <div className="search-form">
         <form>
           <input
@@ -17,7 +17,7 @@ export default function WeatherToday() {
         <button>Show my current location</button>
       </div>
 
-      <div class="grid two-columns">
+      <div className="grid two-columns">
         <div className="description">
           <h3>Partly sunny</h3>
           <div>
@@ -47,7 +47,11 @@ export default function WeatherToday() {
           <div id="date">Sunday 14:00</div>
           <div className="grid wide">
             <span id="temperature">21°C</span>
-            <img class="icon" src={require("./icons/rain.png")} width="200px" />
+            <img
+              className="icon"
+              src={require("./icons/rain.png")}
+              width="200px"
+            />
           </div>
           <br />
           <div>

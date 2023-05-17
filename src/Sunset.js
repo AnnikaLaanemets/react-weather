@@ -4,7 +4,11 @@ export default function Sunset() {
   return (
     <div className="sunset">
       <div>
-        <img class="icon" src={require("./icons/sunset.png")} width="180px" />
+        <img
+          className="icon"
+          src={require("./icons/sunset.png")}
+          width="180px"
+        />
       </div>
       <br />
       <div className="grid two-columns">
