@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import WeatherToday from "./WeatherToday";
 import Sunset from "./Sunset";
@@ -20,9 +19,15 @@ function App() {
           <Forecast />
         </div>
       </div>
+      <footer>
+        {" "}
+        <a href="https://github.com/AnnikaLaanemets/react-weather-board">
+          https://github.com/AnnikaLaanemets/react-weather-board
+        </a>
+      </footer>
+      ;
     </div>
   );
-  <footer>https://github.com/AnnikaLaanemets/react-weather-board</footer>;
 }
 
 export default App;
