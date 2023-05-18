@@ -13,7 +13,7 @@ export default function WeatherToday(props) {
       country: response.data.country,
       temperature: response.data.temperature.current,
       feels: response.data.temperature.feels_like,
-      description: response.data.description,
+      description: response.data.condition.description,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
     });
@@ -40,24 +40,19 @@ export default function WeatherToday(props) {
           <div className="description">
             <h3>{data.description}</h3>
             <div>
-              <span>Precipitation: </span>
-              <span>12%</span>
+              <span>Precipitation: 12% </span>
             </div>
             <div>
-              <span>Wind: </span>
-              <span>{data.wind}</span>
+              <span>Wind: {data.wind} km/h</span>
             </div>
             <div>
-              <span>Humidity: </span>
-              <span>{data.humidity}</span>
+              <span>Humidity: {data.humidity} % </span>
             </div>
             <div>
-              <span>Visibility: </span>
-              <span id="visibility">10 km</span>
+              <span>Visibility: 10 km </span>
             </div>
             <div>
-              <span>UV-index: </span>
-              <span>3</span>
+              <span>UV-index: 2</span>
             </div>
           </div>
 
@@ -85,7 +80,6 @@ export default function WeatherToday(props) {
     );
   } else {
     const key = "baf15f814713odta8a4baa99ed0733e5";
-    let query = "Copenhagen";
     let url = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${key}&units=metric`;
     axios.get(url).then(handleresponse);
 
