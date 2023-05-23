@@ -3,13 +3,13 @@ import WeatherToday from "./WeatherToday";
 import Sunset from "./Sunset";
 import Forecast from "./Forecast";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
         <div className="grid wide">
           <div>
-            <WeatherToday defaultCity="Barcelona" />
+            <WeatherToday defaultCity="Tallinn" />
           </div>
           <div>
             <Sunset />
@@ -32,5 +32,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
