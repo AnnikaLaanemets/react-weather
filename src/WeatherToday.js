@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 import axios from "axios";
 import "./App.css";
 
@@ -17,10 +18,11 @@ export default function WeatherToday(props) {
     setData({
       ready: true,
       city: response.data.name,
-      date: new Date(response.data.timezone * 1000),
+      date: response.data.timezone,
       country: response.data.sys.country,
       temperature: Math.round(response.data.main.temp),
       feels: Math.round(response.data.main.feels_like),
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
@@ -70,8 +72,6 @@ export default function WeatherToday(props) {
             <div>Humidity: {data.humidity} %</div>
             <div>Visibility: {data.visibility} % </div>
             <div>Pressure: {data.pressure} % </div>
-            <div>Sunrise: {data.sunrise}</div>
-            <div>Sunset: {data.sunset}</div>
           </div>
 
           <div className="main">
@@ -80,15 +80,14 @@ export default function WeatherToday(props) {
             </h1>
             <div>
               <div>
-                <FormattedDate date={data.date} />
+                <FormattedDate
+                  current={data.date}
+                  sr={data.sunrise}
+                  ss={data.sunset}
+                />
               </div>
               <div>
-                <img
-                  className="icon-main"
-                  src={require("./icons/sun.png")}
-                  width="200px"
-                  alt="weather icon"
-                ></img>
+                <WeatherIcon className="main-icon" code={data.icon} />
               </div>
               <div className="grid wide">
                 <span id="temperature">{data.temperature} °C</span>
