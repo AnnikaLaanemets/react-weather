@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import button from "./button";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import Countries from "./countries";
 import axios from "axios";
 import "./App.css";
 
@@ -63,20 +65,13 @@ export default function WeatherToday(props) {
             />
             <input type="submit" value="Submit" />
           </form>
-          <button>Show my current location</button>
+          <button onClick={button}>Show my current location</button>
         </div>
         <div className="grid two-columns">
-          <div className="description">
-            <h3>{data.description}</h3>
-            <div>Wind: {data.wind} km/h</div>
-            <div>Humidity: {data.humidity} %</div>
-            <div>Visibility: {data.visibility} % </div>
-            <div>Pressure: {data.pressure} % </div>
-          </div>
-
           <div className="main">
             <h1>
-              {data.city}, {data.country}
+              {data.city}
+              <Countries country={data.country} />
             </h1>
             <div>
               <div>
@@ -87,17 +82,22 @@ export default function WeatherToday(props) {
                 />
               </div>
               <div>
-                <WeatherIcon className="main-icon" code={data.icon} />
+                <WeatherIcon icon={data.icon} description={data.description} />
               </div>
-              <div className="grid wide">
+              <div className="grid">
                 <span id="temperature">{data.temperature} °C</span>
-
-                <br />
                 <div>
                   <span>Feels like: {data.feels} °C</span>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="description">
+            <h3>{data.description}</h3>
+            <div>Wind: {data.wind} km/h</div>
+            <div>Humidity: {data.humidity} %</div>
+            <div>Visibility: {data.visibility} % </div>
+            <div>Pressure: {data.pressure} % </div>
           </div>
         </div>
       </div>

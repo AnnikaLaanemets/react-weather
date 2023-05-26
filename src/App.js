@@ -1,6 +1,5 @@
 import "./App.css";
 import WeatherToday from "./WeatherToday";
-import Sunset from "./Sunset";
 import Forecast from "./Forecast";
 
 export default function App() {
@@ -10,9 +9,6 @@ export default function App() {
         <div className="grid wide">
           <div>
             <WeatherToday defaultCity="Tallinn" />
-          </div>
-          <div>
-            <Sunset />
           </div>
         </div>
         <div>

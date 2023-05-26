@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   margin-top: 30px;
   color: #2f2621;
@@ -18,16 +18,12 @@ body {
   display: grid;
 }
 
-.wide {
+.two-columns {
   grid-template-columns: 3fr 1fr;
 }
 
-.two-columns {
-  grid-template-columns: 1fr 3fr;
-}
-
 .two-rows {
-  grid-template-rows: 1fr 3.5fr;
+  grid-template-rows: 1fr 3fr;
 }
 .three-rows {
   text-align: center;
@@ -40,14 +36,13 @@ body {
   border-radius: 10px;
 }
 
-.eight-columns {
-  grid-template-columns: repeat(8, 1fr);
+.seven-columns {
+  grid-template-columns: repeat(7, 1fr);
   font-size: 16px;
 }
 
 .description,
-.main,
-.sunset {
+.main {
   background: #d0eed2;
   padding: 10px;
   border: var(--border);
@@ -56,8 +51,9 @@ body {
 }
 
 .icon-main {
-  margin-left: 250px;
-  margin-top: -100px;
+  width: 200px;
+  margin-left: 300px;
+  margin-top: -200px;
   position: absolute;
 }
 
@@ -87,7 +83,7 @@ input {
 }
 
 #search-input {
-  width: 80%;
+  width: 83%;
 }
 
 .main {
@@ -104,7 +100,7 @@ input {
 
 #temperature {
   font-size: 76px;
-  margin: 60px 20px 2px 15px;
+  margin: 20px 10px 50px 75px;
 }
 
 .description {
@@ -118,16 +114,6 @@ input {
 
 h3 {
   font-size: 22px;
-}
-
-.sunset {
-  padding-top: 25%;
-  padding-bottom: 35%;
-}
-.sunset div {
-  margin-top: 12%;
-  text-align: center;
-  font-size: 18px;
 }
 
 h4 {
