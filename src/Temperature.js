@@ -7,11 +7,11 @@ export default function Temperature(props) {
   let feels = Math.round(props.feels);
   let tempF = Math.round(temp * 1.8 + 32);
   let feelsF = Math.round(feels * 1.8 + 32);
-  function convertF(event) {
+  function ConvertF(event) {
     event.preventDefault();
     setUnit("Fahrenheit");
   }
-  function convertC(event) {
+  function ConvertC(event) {
     event.preventDefault();
     setUnit("Celsius");
   }
@@ -21,7 +21,7 @@ export default function Temperature(props) {
         <span className="temperature">{temp} °</span>
         <span className="unit">
           C |
-          <a onClick={convertF} href="/">
+          <a onClick={ConvertF} href="/">
             F
           </a>
         </span>
@@ -35,7 +35,7 @@ export default function Temperature(props) {
       <div>
         <span className="temperature">{tempF} °</span>
         <span className="unit">
-          <a onClick={convertC} href="/">
+          <a onClick={ConvertC} href="/">
             C
           </a>
           | F

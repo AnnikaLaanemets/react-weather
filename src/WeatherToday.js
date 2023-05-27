@@ -7,7 +7,7 @@ import Countries from "./Countries";
 import axios from "axios";
 import "./App.css";
 
-export function handleResponse(response) {
+export function HandleResponse(response) {
   return {
     ready: true,
     city: response.data.name,
@@ -35,36 +35,36 @@ export default function WeatherToday(props) {
     setFirstRun(false);
   }
 
-  function handleSubmit(event) {
+  function HandleSubmit(event) {
     event.preventDefault();
     Search();
   }
 
-  function handleChange(event) {
+  function HandleChange(event) {
     setCity(event.target.value);
   }
-  function setDatafromResponse(response) {
-    setData(handleResponse(response));
+  function SetDatafromResponse(response) {
+    setData(HandleResponse(response));
   }
 
   function Search() {
     const key = "d606e3cc0939fabb37c7eb84c5c555bc";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
-    axios.get(url).then(setDatafromResponse);
+    axios.get(url).then(SetDatafromResponse);
   }
 
   if (data.ready) {
     return (
       <div>
         <div className="search-form">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={HandleSubmit}>
             <input
               type="text"
               placeholder="Search city"
               autoComplete="off"
               autoFocus="on"
               id="search-input"
-              onChange={handleChange}
+              onChange={HandleChange}
             />
             <input type="submit" value="Submit" />
           </form>
