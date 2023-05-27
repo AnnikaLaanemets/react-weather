@@ -122,6 +122,10 @@ input {
   margin-top: 12%;
 }
 
+.country {
+  display: flex;
+}
+
 h1 {
   font-size: 28px;
   margin: 10px;
