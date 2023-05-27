@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 export default function WeatherIcon(props) {
   let icon = props.icon;
@@ -13,22 +14,22 @@ export default function WeatherIcon(props) {
     "04d": "./icons/clouds.png",
     "04n": "./icons/clouds.png",
     "09d": "./icons/rain.png",
-    "09n": "./icons/rain.png",
+    "09n": "./icons/rain-night.png",
     "10d": "./icons/light-rain.png",
-    "10n": "./icons/moon.png",
-    "11d": "./icons/thunder.png",
-    "11n": "./icons/thunder.png",
-    "13d": "./icons/sun.png",
-    "13n": "./icons/sun.png",
-    "50d": "./icons/sun.png",
-    "50n": "./icons/sun.png",
+    "10n": "./icons/rain-night.png",
+    "11d": "./icons/thunder-rain.png",
+    "11n": "./icons/thunder-night.png",
+    "13d": "./icons/snow.png",
+    "13n": "./icons/snow.png",
+    "50d": "./icons/fog.png",
+    "50n": "./icons/fog.png",
   };
 
   return (
     <img
       className="icon-main"
       src={require(`${icons[icon]}`)}
-      alt="{description}"
+      alt={description}
     />
   );
 }

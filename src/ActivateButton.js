@@ -1,8 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { handleResponse } from "./WeatherToday";
+import "./App.css";
 
-export default function button(setData) {
+export default function ActivateButton(setData) {
   navigator.geolocation.getCurrentPosition((position) => {
     const url = myLocationUrl(position);
     axios.get(url).then((response) => {

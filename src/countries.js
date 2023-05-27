@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 export default function Countries(props) {
   let country = props.country;
@@ -253,5 +254,5 @@ export default function Countries(props) {
     ZW: "Zimbabwe",
     AX: "Åland Islands",
   };
-  return <div>{allCountries[country]}</div>;
+  return <span>{allCountries[country]}</span>;
 }

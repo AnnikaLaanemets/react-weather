@@ -1,6 +1,5 @@
 import "./App.css";
 import WeatherToday from "./WeatherToday";
-import Forecast from "./Forecast";
 
 export default function App() {
   return (
@@ -11,20 +10,17 @@ export default function App() {
             <WeatherToday defaultCity="Tallinn" />
           </div>
         </div>
-        <div>
-          <Forecast />
-        </div>
       </div>
       <footer>
         {" "}
         <a
           href="https://github.com/AnnikaLaanemets/react-weather-board"
           target="_blank"
+          rel="noreferrer"
         >
           https://github.com/AnnikaLaanemets/react-weather-board
         </a>
-      </footer>
-      ;
+      </footer>{" "}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
+import "./App.css";
 
-//näitab ainult minu ajatsooni aega õigesti
 export default function FormattedDate(props) {
   let date = new Date();
   let sunriseTime = new Date(props.sr * 1000);
@@ -24,7 +24,7 @@ export default function FormattedDate(props) {
 
   return (
     <div>
-      {props.hasDate && <div>{time}</div>}
+      {props.hasDate && <div className="date">{time}</div>}
       {props.hasSunrise && <div>Sunrise: {sunrise}</div>}
       {props.hasSunset && <div>Sunset: {sunset}</div>}
     </div>

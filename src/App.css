@@ -51,10 +51,37 @@ body {
 }
 
 .icon-main {
-  width: 200px;
-  margin-left: 300px;
-  margin-top: -200px;
+  width: 180px;
+  margin-left: 350px;
+  margin-top: -130px;
   position: absolute;
+}
+
+.date {
+  opacity: 0.7;
+  margin-inline-start: 6%;
+}
+
+.temperature {
+  padding: 20px;
+
+  margin-inline-start: 8%;
+
+  font-size: 86px;
+  font-weight: 600;
+}
+
+.unit {
+  font-size: 28px;
+}
+
+.feels {
+  font-size: 28px;
+  opacity: 0.8;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -86,22 +113,25 @@ input {
   width: 83%;
 }
 
-#temperature {
-  font-size: 76px;
-  margin: 20px 10px 50px 75px;
-}
-
 .description {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .description div {
   padding: 4px;
-  margin-top: 8%;
+  margin-top: 12%;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 10px;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 36px;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
 h4 {
@@ -130,12 +160,12 @@ footer {
   margin: 5px;
 }
 
-.rain {
+.fog {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.8)
     ),
-    url("images/rain.jpg");
+    url("images/fog.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 3%;
@@ -159,35 +189,6 @@ footer {
   border-radius: 10px;
   margin: 5px;
 }
-.morning {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.2)
-    ),
-    url("images/morning.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 3%;
-  padding-inline-start: 15%;
-  border: var(--border);
-  border-radius: 10px;
-  margin: 5px;
-}
-
-.evening {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.2)
-    ),
-    url("images/evening.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 3%;
-  padding-inline-start: 15%;
-  border: var(--border);
-  border-radius: 10px;
-  margin: 5px;
-}
 
 .night {
   background-image: linear-gradient(
@@ -202,4 +203,5 @@ footer {
   border: var(--border);
   border-radius: 10px;
   margin: 5px;
+  text-shadow: 5px 2px 25px rgba(191, 193, 190, 0.9);
 }

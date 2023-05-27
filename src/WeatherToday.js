@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import button from "./button";
+import ActivateButton from "./ActivateButton";
 import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
 import WeatherIcon from "./WeatherIcon";
-import Countries from "./countries";
+import Countries from "./Countries";
 import axios from "axios";
 import "./App.css";
 
@@ -44,8 +44,6 @@ export default function WeatherToday(props) {
     setCity(event.target.value);
   }
   function setDatafromResponse(response) {
-    console.log(response);
-    console.log(handleResponse(response));
     setData(handleResponse(response));
   }
 
@@ -72,7 +70,7 @@ export default function WeatherToday(props) {
           </form>
           <button
             onClick={() => {
-              button(setData);
+              ActivateButton(setData);
             }}
           >
             Show my current location
@@ -84,8 +82,7 @@ export default function WeatherToday(props) {
               data.icon === "01d" ||
               data.icon === "02d" ||
               data.icon === "03d" ||
-              data.icon === "04d" ||
-              data.icon === "50d"
+              data.icon === "04d"
                 ? "day"
                 : ""
             } ${
@@ -93,22 +90,28 @@ export default function WeatherToday(props) {
               data.icon === "02n" ||
               data.icon === "03n" ||
               data.icon === "04n" ||
-              data.icon === "13n" ||
-              data.icon === "50n"
+              data.icon === "09n" ||
+              data.icon === "10n" ||
+              data.icon === "11n"
                 ? "night"
                 : ""
             }
              ${
-               data.icon === "09d" || data.icon === "10d" || data.icon === "11d"
-                 ? "rain"
+               data.icon === "09d" ||
+               data.icon === "10d" ||
+               data.icon === "11d" ||
+               data.icon === "50d" ||
+               data.icon === "50n"
+                 ? "fog"
                  : ""
              } ${data.temperature < 0 ? "snow" : ""} 
            `}
           >
             <h1>
-              {data.city},
+              {data.city},&nbsp;
               <Countries country={data.country} />
             </h1>
+
             <div>
               <div>
                 <FormattedDate
@@ -120,6 +123,7 @@ export default function WeatherToday(props) {
                   hasSunset={false}
                 />
               </div>
+              <h3>{data.description}</h3>
               <div>
                 <WeatherIcon icon={data.icon} description={data.description} />
               </div>
@@ -127,11 +131,10 @@ export default function WeatherToday(props) {
             </div>
           </div>
           <div className="description">
-            <h3>{data.description}</h3>
-            <div>Wind: {data.wind} km/h</div>
+            <div>Wind: {data.wind} m/s</div>
             <div>Humidity: {data.humidity} %</div>
-            <div>Visibility: {data.visibility} % </div>
-            <div>Pressure: {data.pressure} % </div>
+            <div>Visibility: {data.visibility} </div>
+            <div>Pressure: {data.pressure} hPa </div>
             <FormattedDate
               current={data.date}
               sr={data.sunrise}
@@ -145,6 +148,30 @@ export default function WeatherToday(props) {
       </div>
     );
   } else {
-    return "Loading...";
+    return (
+      <div>
+        <div className="search-form">
+          <form>
+            <input
+              type="text"
+              placeholder="Search city"
+              autoComplete="off"
+              autoFocus="on"
+              id="search-input"
+            />
+            <input type="submit" value="Submit" />
+          </form>
+          <button>Show my current location</button>
+        </div>
+        <div className="grid two-columns">
+          <div className="fog">
+            <h1>Loading...</h1>
+          </div>
+          <div className="description">
+            <div>...</div>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
