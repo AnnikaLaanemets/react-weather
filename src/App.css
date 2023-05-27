@@ -86,18 +86,6 @@ input {
   width: 83%;
 }
 
-.main {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255)
-    ),
-    url("images/road.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 3%;
-  padding-inline-start: 15%;
-}
-
 #temperature {
   font-size: 76px;
   margin: 20px 10px 50px 75px;
@@ -125,4 +113,93 @@ footer {
   text-align: center;
   font-size: 16px;
   margin: 20px;
+}
+
+.day {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255)
+    ),
+    url("images/day.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3%;
+  padding-inline-start: 15%;
+  border: var(--border);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.rain {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("images/rain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3%;
+  padding-inline-start: 15%;
+  border: var(--border);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.snow {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("images/snow.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3%;
+  padding-inline-start: 15%;
+  border: var(--border);
+  border-radius: 10px;
+  margin: 5px;
+}
+.morning {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("images/morning.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3%;
+  padding-inline-start: 15%;
+  border: var(--border);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.evening {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("images/evening.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3%;
+  padding-inline-start: 15%;
+  border: var(--border);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.night {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("images/night.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3%;
+  padding-inline-start: 15%;
+  border: var(--border);
+  border-radius: 10px;
+  margin: 5px;
 }
