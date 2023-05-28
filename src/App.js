@@ -18,7 +18,7 @@ export default function App() {
           target="_blank"
           rel="noreferrer"
         >
-          https://github.com/AnnikaLaanemets/react-weather-board
+          https://github.com/AnnikaLaanemets/react-weather
         </a>
       </footer>{" "}
     </div>
