@@ -13,7 +13,7 @@ export default function FormattedDate(props) {
   let TZ = timezone / 3600;
   let local = TZ - offsetHours;
   let adjustedTime = new Date(date.getTime() + local * 3600 * 1000);
-  let time = moment(adjustedTime).format("YYYY MMMM DD dddd, HH:mm");
+  let time = moment(adjustedTime).format("MMMM DD dddd, HH:mm");
 
   let sunrise = moment(sunriseTime.getTime() + local * 3600 * 1000).format(
     "HH:mm"

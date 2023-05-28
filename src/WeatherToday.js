@@ -78,7 +78,9 @@ export default function WeatherToday(props) {
         </div>
         <div className="grid two-columns">
           <div
-            className={`${
+            className={`
+      
+            ${
               data.icon === "01d" ||
               data.icon === "02d" ||
               data.icon === "03d" ||
@@ -104,7 +106,8 @@ export default function WeatherToday(props) {
                data.icon === "50n"
                  ? "fog"
                  : ""
-             } ${data.temperature < 0 ? "snow" : ""} 
+             } 
+             ${data.temperature < 0 ? "snow" : ""}
            `}
           >
             <h1>

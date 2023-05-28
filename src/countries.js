@@ -254,5 +254,9 @@ export default function Countries(props) {
     ZW: "Zimbabwe",
     AX: "Åland Islands",
   };
-  return <div className="country">{allCountries[country]}</div>;
+  return (
+    <div className="country">
+      <span>{allCountries[country]}</span>
+    </div>
+  );
 }

@@ -72,7 +72,7 @@ body {
 }
 
 .unit {
-  font-size: 28px;
+  font-size: 42px;
 }
 
 .feels {
@@ -119,15 +119,15 @@ input {
 
 .description div {
   padding: 4px;
-  margin-top: 12%;
+  margin-top: 10%;
 }
 
 .country {
-  display: flex;
+  display: inline-flex;
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 30px;
   margin: 10px;
 }
 
@@ -166,8 +166,8 @@ footer {
 
 .fog {
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.8)
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.3)
     ),
     url("images/fog.jpg");
   background-repeat: no-repeat;
@@ -177,12 +177,13 @@ footer {
   border: var(--border);
   border-radius: 10px;
   margin: 5px;
+  text-shadow: 5px 2px 25px rgba(191, 193, 190, 0.9);
 }
 
 .snow {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.3)
+      rgba(255, 255, 255, 0.7)
     ),
     url("images/snow.jpg");
   background-repeat: no-repeat;
@@ -192,6 +193,7 @@ footer {
   border: var(--border);
   border-radius: 10px;
   margin: 5px;
+  text-shadow: 5px 2px 25px rgba(191, 193, 190, 0.9);
 }
 
 .night {
