@@ -3,7 +3,7 @@ import ActivateButton from "./ActivateButton";
 import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
 import WeatherIcon from "./WeatherIcon";
-import Countries from "./Countries.js";
+import Countries from "./Countries";
 import axios from "axios";
 import "./App.css";
 
