@@ -1,5 +1,6 @@
 :root {
   --border: 5px solid #70af85;
+  --shadow: 5px 2px 25px rgba(191, 193, 190, 0.9);
 }
 body {
   font-family: "Merriweather", serif;
@@ -22,10 +23,12 @@ body {
   grid-template-columns: 3fr 1fr;
 }
 
-.two-rows {
-  grid-template-rows: 1fr 3fr;
+.row {
+  grid-template-columns: repeat(7, 1fr);
 }
+
 .three-rows {
+  height: 160px;
   text-align: center;
   grid-template-rows: 1fr 2fr 1fr;
   grid-gap: 4px;
@@ -34,11 +37,6 @@ body {
   background-color: #70af85;
   border: var(--border);
   border-radius: 10px;
-}
-
-.seven-columns {
-  grid-template-columns: repeat(7, 1fr);
-  font-size: 16px;
 }
 
 .description,
@@ -55,6 +53,10 @@ body {
   margin-left: 350px;
   margin-top: -130px;
   position: absolute;
+}
+
+.icon {
+  width: 100px;
 }
 
 .date {
@@ -80,8 +82,18 @@ body {
   opacity: 0.8;
 }
 
+.today {
+  opacity: 0.6;
+}
+
+.dailyTemperature {
+  font-weight: 700;
+  font-size: 26px;
+}
 a {
   text-decoration: none;
+  color: #51b858;
+  text-shadow: var(--shadow);
 }
 
 button {
@@ -132,7 +144,7 @@ h1 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 42px;
   text-transform: capitalize;
   margin-top: 20px;
   margin-bottom: 8px;
@@ -177,7 +189,7 @@ footer {
   border: var(--border);
   border-radius: 10px;
   margin: 5px;
-  text-shadow: 5px 2px 25px rgba(191, 193, 190, 0.9);
+  text-shadow: var(--shadow);
 }
 
 .snow {
@@ -193,7 +205,7 @@ footer {
   border: var(--border);
   border-radius: 10px;
   margin: 5px;
-  text-shadow: 5px 2px 25px rgba(191, 193, 190, 0.9);
+  text-shadow: var(--shadow);
 }
 
 .night {
@@ -209,5 +221,5 @@ footer {
   border: var(--border);
   border-radius: 10px;
   margin: 5px;
-  text-shadow: 5px 2px 25px rgba(191, 193, 190, 0.9);
+  text-shadow: var(--shadow);
 }

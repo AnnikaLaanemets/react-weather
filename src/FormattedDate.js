@@ -6,7 +6,6 @@ export default function FormattedDate(props) {
   let date = new Date();
   let sunriseTime = new Date(props.sr * 1000);
   let sunsetTime = new Date(props.ss * 1000);
-
   let timezone = props.current;
   let timeZoneOffset = date.getTimezoneOffset();
   let offsetHours = -timeZoneOffset / 60;

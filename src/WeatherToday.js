@@ -3,6 +3,7 @@ import ActivateButton from "./ActivateButton";
 import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
 import WeatherIcon from "./WeatherIcon";
+import Forecast from "./Forecast";
 import Countries from "./countries";
 import axios from "axios";
 import "./App.css";
@@ -10,6 +11,7 @@ import "./App.css";
 export function HandleResponse(response) {
   return {
     ready: true,
+    coords: response.data.coord,
     city: response.data.name,
     date: response.data.timezone,
     country: response.data.sys.country,
@@ -148,6 +150,7 @@ export default function WeatherToday(props) {
             />
           </div>
         </div>
+        <Forecast coordinates={data.coords} />
       </div>
     );
   } else {
