@@ -83,12 +83,12 @@ body {
 }
 
 .today {
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
 .dailyTemperature {
   font-weight: 700;
-  font-size: 26px;
+  font-size: 22px;
 }
 a {
   text-decoration: none;

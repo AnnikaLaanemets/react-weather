@@ -16,7 +16,7 @@ export default function ForecastDay(props) {
         setDay(Day);
       }, 100);
     });
-    return day;
+    return <div>{day}</div>;
   }
 
   function minTemperature() {
