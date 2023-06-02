@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ForecastIcon from "./ForecastIcon";
+
 import moment from "moment";
 import "./App.css";
 
@@ -16,7 +17,7 @@ export default function ForecastDay(props) {
         setDay(Day);
       }, 100);
     });
-    return <div>{day}</div>;
+    return day;
   }
 
   function minTemperature() {
@@ -39,8 +40,7 @@ export default function ForecastDay(props) {
         />
       </div>
       <div className="dailyTemperature">
-        {minTemperature()} | {maxTemperature()}
-        °C
+        {minTemperature()} / {maxTemperature()}
       </div>
     </div>
   );

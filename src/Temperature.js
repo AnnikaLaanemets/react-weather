@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./App.css";
 
 export default function Temperature(props) {
@@ -21,7 +22,12 @@ export default function Temperature(props) {
         <span className="temperature">{temp} °</span>
         <span className="unit">
           C |
-          <a onClick={ConvertF} href="/">
+          <a
+            onClick={function (event) {
+              ConvertF(event);
+            }}
+            href="/"
+          >
             F
           </a>
         </span>

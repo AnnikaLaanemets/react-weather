@@ -89,7 +89,7 @@ export default function WeatherToday(props) {
               data.icon === "04d"
                 ? "day"
                 : ""
-            } ${
+            } ${data.icon === "03d" || data.icon === "04d" ? "clouds" : ""} ${
               data.icon === "01n" ||
               data.icon === "02n" ||
               data.icon === "03n" ||
@@ -100,6 +100,7 @@ export default function WeatherToday(props) {
                 ? "night"
                 : ""
             }
+          
              ${
                data.icon === "09d" ||
                data.icon === "10d" ||
@@ -128,7 +129,9 @@ export default function WeatherToday(props) {
                   hasSunset={false}
                 />
               </div>
-              <h3>{data.description}</h3>
+              <h3 className={data.description.length > 15 ? "smaller" : ""}>
+                {data.description}
+              </h3>
               <div>
                 <WeatherIcon icon={data.icon} description={data.description} />
               </div>
@@ -141,6 +144,7 @@ export default function WeatherToday(props) {
             <div>Visibility: {data.visibility} </div>
             <div>Pressure: {data.pressure} hPa </div>
             <FormattedDate
+              className="date"
               current={data.date}
               sr={data.sunrise}
               ss={data.sunset}
@@ -150,6 +154,7 @@ export default function WeatherToday(props) {
             />
           </div>
         </div>
+
         <Forecast coordinates={data.coords} />
       </div>
     );
