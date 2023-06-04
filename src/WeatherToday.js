@@ -81,7 +81,6 @@ export default function WeatherToday(props) {
         <div className="grid two-columns">
           <div
             className={`
-      
             ${
               data.icon === "01d" ||
               data.icon === "02d" ||
@@ -110,7 +109,7 @@ export default function WeatherToday(props) {
                  ? "fog"
                  : ""
              } 
-             ${data.temperature < 0 ? "snow" : ""}
+             ${data.temperature < 2 ? "snow" : ""}
            `}
           >
             <h1>
@@ -135,7 +134,12 @@ export default function WeatherToday(props) {
               <div>
                 <WeatherIcon icon={data.icon} description={data.description} />
               </div>
-              <Temperature celsius={data.temperature} feels={data.feels} />
+              <Temperature
+                setUnit={props.setUnit}
+                unit={props.unit}
+                celsius={data.temperature}
+                feels={data.feels}
+              />
             </div>
           </div>
           <div className="description">
@@ -155,7 +159,7 @@ export default function WeatherToday(props) {
           </div>
         </div>
 
-        <Forecast coordinates={data.coords} />
+        <Forecast coordinates={data.coords} unit={props.unit} />
       </div>
     );
   } else {

@@ -9,8 +9,7 @@ export default function FormattedDate(props) {
   let timezone = props.current;
   let timeZoneOffset = date.getTimezoneOffset();
   let offsetHours = -timeZoneOffset / 60;
-  let TZ = timezone / 3600;
-  let local = TZ - offsetHours;
+  let local = timezone / 3600 - offsetHours;
   let adjustedTime = new Date(date.getTime() + local * 3600 * 1000);
   let time = moment(adjustedTime).format("MMMM DD dddd, HH:mm");
 

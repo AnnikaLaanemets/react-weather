@@ -1,13 +1,19 @@
 import "./App.css";
 import WeatherToday from "./WeatherToday";
+import React, { useState } from "react";
 
 export default function App() {
+  const [unit, setUnit] = useState("Celsius");
   return (
     <div className="App">
       <div className="container">
         <div className="grid wide">
           <div>
-            <WeatherToday defaultCity="Tallinn" />
+            <WeatherToday
+              defaultCity="Barcelona"
+              setUnit={setUnit}
+              unit={unit}
+            />
           </div>
         </div>
       </div>

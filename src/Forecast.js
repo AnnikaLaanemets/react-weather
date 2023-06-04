@@ -25,7 +25,7 @@ export default function Forecast(props) {
             if (index < 8) {
               return (
                 <div key={index} className={index < 1 ? "today" : ""}>
-                  <ForecastDay data={daily} />
+                  <ForecastDay unit={props.unit} data={daily} />
                 </div>
               );
             } else {
@@ -41,7 +41,5 @@ export default function Forecast(props) {
     let longitude = props.coordinates.lon;
     const url = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${key}&units=metric`;
     axios.get(url).then(showForecast);
-
-    return null;
   }
 }

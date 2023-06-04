@@ -1,38 +1,29 @@
-import React, { useState, useEffect } from "react";
 import ForecastIcon from "./ForecastIcon";
-
 import moment from "moment";
 import "./App.css";
 
 export default function ForecastDay(props) {
-  let [day, setDay] = useState(false);
-
-  function ShowDay() {
-    let Day = props.data.time * 1000;
-    Day = new Date(Day);
-    Day = moment(Day).format("dddd");
-
-    useEffect(() => {
-      setTimeout(() => {
-        setDay(Day);
-      }, 100);
-    });
-    return day;
-  }
+  const day = moment(new Date(props.data.time * 1000)).format("dddd");
 
   function minTemperature() {
     let temperature = Math.round(props.data.temperature.minimum);
-    return `${temperature}`;
+    if (props.unit === "Celsius") {
+      return `${temperature}`;
+    }
+    return `${Math.round(temperature * 1.8 + 32)}`;
   }
 
   function maxTemperature() {
     let temperature = Math.round(props.data.temperature.maximum);
-    return `${temperature}`;
+    if (props.unit === "Celsius") {
+      return `${temperature}  °C`;
+    }
+    return `${Math.round(temperature * 1.8 + 32)}  °F`;
   }
 
   return (
     <div className="grid three-rows">
-      <div>{ShowDay()}</div>
+      <div>{day}</div>
       <div>
         <ForecastIcon
           icon={props.data.condition.icon}
