@@ -145,8 +145,14 @@ export default function WeatherToday(props) {
           <div className="description">
             <div>Wind: {data.wind} m/s</div>
             <div>Humidity: {data.humidity} %</div>
-            <div>Visibility: {data.visibility} </div>
+            <div>Visibility: {data.visibility} m </div>
             <div>Pressure: {data.pressure} hPa </div>
+
+            <img
+              className="sunset"
+              src={require("./icons/sunset.png")}
+              alt="Sunset icon"
+            />
             <FormattedDate
               className="date"
               current={data.date}

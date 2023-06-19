@@ -23,8 +23,10 @@ export default function FormattedDate(props) {
   return (
     <div>
       {props.hasDate && <div className="date">{time}</div>}
-      {props.hasSunrise && <div>Sunrise: {sunrise}</div>}
-      {props.hasSunset && <div>Sunset: {sunset}</div>}
+      <div className="sunrise">
+        {props.hasSunrise && <div>Sunrise: {sunrise}</div>}
+        {props.hasSunset && <div>Sunset: {sunset}</div>}
+      </div>
     </div>
   );
 }

@@ -51,7 +51,7 @@ body {
 .icon-main {
   width: 200px;
   margin-left: 340px;
-  margin-top: -120px;
+  margin-top: -160px;
   position: absolute;
 }
 
@@ -59,9 +59,16 @@ body {
   width: 100px;
 }
 
+.sunset {
+  width: 140px;
+  margin: 20px;
+  margin-inline-start: 10%;
+}
+
 .date {
   opacity: 0.8;
   margin-inline-start: 6%;
+  margin: 28px;
 }
 
 .smaller {
@@ -133,7 +140,7 @@ input {
 
 .description div {
   padding: 4px;
-  margin-top: 10%;
+  margin-top: 8px;
 }
 
 .country {
@@ -249,4 +256,65 @@ footer {
 .night .date {
   color: #daf5dc;
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  #search-input {
+    width: 60%;
+  }
+  .grid {
+    width: 360px;
+  }
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .three-rows {
+    width: 102px;
+    height: 110px;
+    font-size: 16px;
+  }
+  .dailyTemperature {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .icon {
+    width: 60px;
+  }
+
+  .date {
+    font-size: 20px;
+    margin: 10px;
+  }
+  .temperature {
+    font-size: 58px;
+    margin-inline-start: 2px;
+  }
+  .feels {
+    font-size: 24px;
+  }
+  .unit {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+  .icon-main,
+  .sunset,
+  .today,
+  .sunrise {
+    display: none;
+  }
 }
