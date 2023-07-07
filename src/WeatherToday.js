@@ -153,6 +153,7 @@ export default function WeatherToday(props) {
               src={require("./icons/sunset.png")}
               alt="Sunset icon"
             />
+
             <FormattedDate
               className="date"
               current={data.date}

@@ -62,7 +62,8 @@ body {
 .sunset {
   width: 140px;
   margin: 20px;
-  margin-inline-start: 10%;
+  margin-bottom: 0;
+  margin-inline-start: 13%;
 }
 
 .date {
@@ -259,24 +260,34 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .container {
+    width: 350px;
+    margin: 0 auto;
+  }
   #search-input {
-    width: 60%;
+    width: 58%;
   }
   .grid {
-    width: 360px;
+    width: 350px;
   }
   .two-columns {
     grid-template-columns: 1fr;
   }
 
   .row {
+    width: 350px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   .three-rows {
-    width: 102px;
+    width: 100px;
     height: 110px;
     font-size: 16px;
+  }
+  h1,
+  h3 {
+    margin-inline-start: -16px;
+    font-size: 28px;
   }
   .dailyTemperature {
     font-weight: 500;
@@ -307,14 +318,21 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  div {
+    margin: 0;
+    padding: 0;
+  }
+
+  .sunset {
+    width: 100px;
+    margin: 25px 14px;
+  }
 
   footer {
     font-size: 12px;
   }
   .icon-main,
-  .sunset,
-  .today,
-  .sunrise {
+  .today {
     display: none;
   }
 }
