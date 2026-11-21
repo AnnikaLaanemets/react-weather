@@ -28,6 +28,16 @@ export function HandleResponse(response) {
   };
 }
 
+function getBackgroundClass(icon) {
+  const condition = icon.slice(0, 2);
+  if (condition === "13") return "snow";
+  if (condition === "50") return "fog";
+  if (icon.endsWith("n")) return "night";
+  if (["09", "10", "11"].includes(condition)) return "fog";
+  if (condition === "03" || condition === "04") return "clouds";
+  return "day";
+}
+
 export default function WeatherToday(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [data, setData] = useState({ ready: false });
@@ -79,39 +89,7 @@ export default function WeatherToday(props) {
           </button>
         </div>
         <div className="grid two-columns">
-          <div
-            className={`
-            ${
-              data.icon === "01d" ||
-              data.icon === "02d" ||
-              data.icon === "03d" ||
-              data.icon === "04d"
-                ? "day"
-                : ""
-            } ${data.icon === "03d" || data.icon === "04d" ? "clouds" : ""} ${
-              data.icon === "01n" ||
-              data.icon === "02n" ||
-              data.icon === "03n" ||
-              data.icon === "04n" ||
-              data.icon === "09n" ||
-              data.icon === "10n" ||
-              data.icon === "11n"
-                ? "night"
-                : ""
-            }
-          
-             ${
-               data.icon === "09d" ||
-               data.icon === "10d" ||
-               data.icon === "11d" ||
-               data.icon === "50d" ||
-               data.icon === "50n"
-                 ? "fog"
-                 : ""
-             } 
-             ${data.temperature < 2 ? "snow" : ""}
-           `}
-          >
+          <div className={getBackgroundClass(data.icon)}>
             <h1>
               {data.city},&nbsp;
               <Countries country={data.country} />

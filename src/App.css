@@ -133,6 +133,8 @@ input {
 
 #search-input {
   width: 83%;
+  direction: ltr;
+  text-align: left;
 }
 
 .description {
